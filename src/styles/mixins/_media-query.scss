@@ -1,0 +1,27 @@
+@mixin media($min: 0) {
+  $type: type-of($min);
+  $medium: 768px !default;
+  $large: 1024px !default;
+
+  @if $type == number {
+    $query: '(min-width: #{$min})';
+  }
+
+  @else if $type == string {
+    @if $min == medium {
+      $query: '(min-width: #{$medium})';
+    }
+
+    @else if $min == large {
+      $query: '(min-width: #{$large})';
+    }
+
+    @else {
+      @warn 'The media mixin supports the following attributes: medium, large';
+    }
+  }
+
+  @media #{$query} {
+    @content;
+  }
+}

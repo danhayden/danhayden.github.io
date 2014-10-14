@@ -1,0 +1,32 @@
+.intro__image {
+  margin: 0 auto $spacing--primary;
+  max-width: 50%;
+
+  @include media(medium) {
+    float: right;
+    margin: 0 0 0 $spacing--secondary;
+  }
+
+  img {
+    border: 6px solid $background-color--tertiary;
+    display: block;
+    margin: auto;
+    border-radius: 50%;
+    max-width: 150px;
+
+    @include media(medium) {
+      max-width: 180px;
+    }
+  }
+}
+
+.intro__content {
+  text-align: center;
+  font-size: $font-size--intro;
+  font-family: $font-family--secondary;
+  font-weight: 400;
+
+  @include media(medium) {
+    text-align: left;
+  }
+}

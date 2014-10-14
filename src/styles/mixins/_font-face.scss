@@ -1,0 +1,6 @@
+@mixin fontface($family, $src) {
+  @font-face {
+    font-family: $family;
+    src: url('#{$src}.woff') format('woff');
+  }
+}

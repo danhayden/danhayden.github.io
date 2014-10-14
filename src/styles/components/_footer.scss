@@ -1,0 +1,32 @@
+.main-footer {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid $border-color--primary;
+  padding-top: $spacing--primary;
+}
+
+.main-footer-wrap {
+  padding-top: 0;
+}
+
+.main-footer__list {
+  display: flex;
+
+  &--large {
+    display: none;
+  }
+
+  @include media(medium) {
+    &--small {
+      display: none;
+    }
+
+    &--large {
+      display: flex;
+    }
+  }
+
+  li {
+    padding: 0 0.5em;
+  }
+}

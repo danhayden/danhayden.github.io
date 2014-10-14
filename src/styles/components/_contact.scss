@@ -1,0 +1,21 @@
+.contact {
+  text-align: center;
+  font-size: $font-size--contact;
+
+  &__inner {
+    @include media(medium) {
+      max-width: 55%;
+      margin: auto;
+    }
+  }
+}
+
+.contact__list {
+  li {
+    margin-bottom: $spacing--secondary;
+  }
+
+  a {
+    font-weight: 700;
+  }
+}

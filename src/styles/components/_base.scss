@@ -1,0 +1,20 @@
+:root {
+  background: $background-color--primary;
+  color: $font-color--primary;
+  font-size: $font-size--primary;
+  font-family: $font-family--primary;
+  line-height: $line-height--primary;
+}
+
+.cf {
+  @include clear-fix;
+}
+
+.container {
+  max-width: $width--container;
+  margin: auto;
+}
+
+.content {
+  padding: $spacing--primary;
+}

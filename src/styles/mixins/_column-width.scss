@@ -1,0 +1,4 @@
+@mixin column-width($columns, $gutter: $spacing--secondary) {
+  $gutters: $columns - 1;
+  width: calc((100% - #{$gutter * $gutters}) / #{$columns});
+}

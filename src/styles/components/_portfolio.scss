@@ -1,0 +1,50 @@
+.portfolio {
+  background: $background-color--secondary;
+}
+
+.portfolio-grid {
+  @include media(medium) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.portfolio-item {
+  margin: $spacing--primary 0;
+  padding: $spacing--secondary 0 0;
+  background: $color--off-white;
+  display: inline-flex;
+  flex-direction: column;
+
+  @include media(medium) {
+    @include column-width(2);
+  }
+
+  @include media(large) {
+    @include column-width(3);
+  }
+}
+
+.portfolio-item__content {
+  padding: $spacing--secondary;
+  flex-grow: 1;
+}
+
+.portfolio-item__title {
+  text-align: center;
+  margin-bottom: $spacing--secondary;
+}
+
+.portfolio-item__image {
+  display: block;
+
+  &-wrap {
+    padding: 8% 16%;
+    background: $color--blue;
+  }
+}
+
+.portfolio-item__button {
+  width: 100%;
+}

@@ -1,0 +1,32 @@
+$input-padding: 0.3rem 0.4rem;
+
+@mixin form-elem-base {
+  margin: 0;
+  outline: 0;
+  padding: $input-padding;
+  position: relative;
+}
+
+@mixin button {
+  @include form-elem-base;
+  padding: 0.7rem 0.8rem;
+  border: 1px solid transparent;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1em;
+  font-weight: 500;
+  line-height: 1.2;
+  max-width: 100%;
+  text-align: center;
+  user-select: none;
+  white-space: nowrap;
+}
+
+@mixin input {
+  @include form-elem-base;
+  background: #fff;
+  border: 1px #ccc solid;
+  display: block;
+  color: $font-color--primary;
+}

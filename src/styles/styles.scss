@@ -1,0 +1,32 @@
+@import 'variables/_index';
+@import 'mixins/_index';
+
+@import 'base/reset';
+
+@import 'components/base';
+@import 'components/typography';
+@import 'components/header';
+@import 'components/intro';
+@import 'components/portfolio';
+@import 'components/contact';
+@import 'components/footer';
+
+.list {
+  margin-bottom: $spacing--secondary;
+}
+
+.list--inline-blocks {
+  li {
+    display: inline-block;
+    background: tomato;
+    color: #fff;
+    border-radius: 0.4em;
+    padding: 0.2em 0.4em;
+    margin-bottom: 0.4em;
+  }
+}
+
+.button {
+  @include button;
+  background: teal;
+}

@@ -1,0 +1,72 @@
+{
+  "name": "danhayden.github.io",
+  "version": "1.0.0",
+  "description": "GitHub website for Dan Hayden (danhayden)",
+  "main": "index.html",
+  "engines": {
+    "node": "5.x"
+  },
+  "scripts": {
+    "postinstall": "npm run build",
+    "start": "http-server",
+    "dev": "npm-run-all --parallel start watch browser-sync",
+    "test": "npm run lint",
+    "deploy": "git push origin `git subtree split --prefix public develop`:master --force",
+    "lint": "npm-run-all --parallel lint:*",
+    "build": "npm-run-all --parallel build:*",
+    "watch": "npm-run-all --parallel watch:*",
+    "sass": "node-sass src/styles --output build/temp/css --source-map public/css --include-path node_modules",
+    "postcss": "postcss --config build/postcss.config.js --dir public/css build/temp/css/*.css",
+    "lint:styles": "stylelint src/styles/**/*.scss --syntax scss --config build/stylelint.config.js",
+    "build:styles": "npm-run-all --sequential sass postcss",
+    "watch:styles": "npm-run-all --sequential build:styles --parallel \"sass -- --watch --recursive\" \"postcss -- --watch\"",
+    "lint:scripts": "semistandard",
+    "build:scripts": "webpack --config build/webpack.config.js",
+    "watch:scripts": "npm run build:scripts -- --watch",
+    "browser-sync": "browser-sync start --config build/browsersync.config.js --server --directory"
+  },
+  "author": "Dan Hayden <pythonic1@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "autoprefixer": "6.3.3",
+    "babel-core": "6.7.2",
+    "babel-loader": "6.2.4",
+    "babel-preset-es2015": "6.6.0",
+    "babel-preset-react": "6.5.0",
+    "browser-sync": "2.11.1",
+    "cssnano": "3.5.2",
+    "glob": "7.0.3",
+    "http-server": "0.9.0",
+    "imports-loader": "0.6.5",
+    "node-sass": "3.4.2",
+    "npm-run-all": "1.5.3",
+    "postcss-cli": "2.5.1",
+    "string-replace-loader": "1.0.0",
+    "style-reset": "github:danhayden/style-reset",
+    "stylelint-config-standard": "4.0.1",
+    "stylelint": "5.0.1",
+    "webpack": "1.12.14"
+  },
+  "semistandard": {
+    "ignore": [
+      "public/**"
+    ]
+  },
+  "babel": {
+    "compact": true,
+    "presets": [
+      "es2015",
+      "react"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danhayden/danhayden.github.io.git"
+  },
+  "bugs": {
+    "url": "https://github.com/danhayden/danhayden.github.io/issues"
+  },
+  "homepage": "https://github.com/danhayden/danhayden.github.io#readme"
+}

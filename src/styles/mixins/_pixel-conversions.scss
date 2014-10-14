@@ -1,0 +1,24 @@
+@function strip-units($number) {
+  @return $number / ($number * 0 + 1);
+}
+
+@function vw($pxval, $base: $width--container) {
+  $pxval: strip-units($pxval);
+  $base: strip-units($base);
+
+  @return ($pxval / $base) * 100vw;
+}
+
+@function rem($pxval, $base: $font-size--primary) {
+  $pxval: strip-units($pxval);
+  $base: strip-units($base);
+
+  @return ($pxval / $base) * 1rem;
+}
+
+@function em($pxval, $base: $font-size--primary) {
+  $pxval: strip-units($pxval);
+  $base: strip-units($base);
+
+  @return ($pxval / $base) * 1em;
+}

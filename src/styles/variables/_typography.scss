@@ -1,0 +1,11 @@
+@import '../mixins/pixel-conversions';
+
+$font-family--primary: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-family--secondary: 'Roboto Slab', $font-family--primary;
+
+$font-size--primary: 16px;
+$font-size--contact: em(17px);
+$font-size--header: em(24px);
+$font-size--intro: em(20px);
+
+$line-height--primary: (24px / $font-size--primary);
