@@ -272,6 +272,7 @@
     (function () {
       var readyStateCheckInterval = setInterval(function () {
         if (document.readyState === 'complete') {
+          clearInterval(readyStateCheckInterval);
           var stylesheet = document.createElement('style');
           stylesheet.setAttribute('rel', 'stylesheet');
           stylesheet.setAttribute('type', 'text/css');
