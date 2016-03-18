@@ -28,6 +28,7 @@
   "author": "Dan Hayden <pythonic1@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "ready-state-stylesheet": "1.0.0"
   },
   "devDependencies": {
     "autoprefixer": "6.3.3",
