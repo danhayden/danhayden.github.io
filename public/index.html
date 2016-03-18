@@ -273,10 +273,10 @@
       var readyStateCheckInterval = setInterval(function () {
         if (document.readyState === 'complete') {
           clearInterval(readyStateCheckInterval);
-          var stylesheet = document.createElement('style');
+          var stylesheet = document.createElement('link');
           stylesheet.setAttribute('rel', 'stylesheet');
           stylesheet.setAttribute('type', 'text/css');
-          stylesheet.setAttribute('href', 'https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto+Slab');
+          stylesheet.setAttribute('href', encodeURI('https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto+Slab'));
           document.head.appendChild(stylesheet);
           document.body.parentNode.classList.add('fonts-loaded');
         }
