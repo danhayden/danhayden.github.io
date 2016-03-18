@@ -23,8 +23,11 @@
 .intro__content {
   text-align: center;
   font-size: $font-size--intro;
-  font-family: $font-family--secondary;
   font-weight: 400;
+
+  .fonts-loaded & {
+    font-family: $font-family--secondary;
+  }
 
   @include media(medium) {
     text-align: left;

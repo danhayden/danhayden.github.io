@@ -2,8 +2,12 @@
   background: $background-color--primary;
   color: $font-color--primary;
   font-size: $font-size--primary;
-  font-family: $font-family--primary;
+  font-family: $font-family;
   line-height: $line-height--primary;
+
+  &.fonts-loaded {
+    font-family: $font-family--primary;
+  }
 }
 
 .cf {
