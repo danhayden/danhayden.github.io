@@ -25,3 +25,23 @@ a[href]:not([class]) {
     text-shadow: 1px 1px #bbb;
   }
 }
+
+.list {
+  margin-bottom: $spacing--secondary;
+}
+
+.list--inline-blocks {
+  li {
+    display: inline-block;
+    background: tomato;
+    color: #fff;
+    border-radius: 0.4em;
+    padding: 0.2em 0.4em;
+    margin-bottom: 0.4em;
+  }
+}
+
+.button {
+  @include button;
+  background: teal;
+}
