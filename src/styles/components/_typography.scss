@@ -39,6 +39,12 @@ a[href]:not([class]) {
     padding: 0.2em 0.4em;
     margin-bottom: 0.4em;
   }
+
+  &--blue {
+    li {
+      background: $color--blue;
+    }
+  }
 }
 
 .button {
